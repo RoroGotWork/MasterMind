@@ -48,7 +48,7 @@ public class MasterMind {
 
         sendTrialsMessage();
 
-        System.out.println(getMentionMessage() + " ! Vous avez réussi en " + trials + " essais");
+        System.out.println( (trials <= 5 ? "Bravo" : trials <= 10 ? "Correct" : "Décevant") + " ! Vous avez réussi en " + trials + " essais");
 
     }
 
@@ -100,11 +100,6 @@ public class MasterMind {
         }
 
         return true;
-    }
-
-    // Calcul du nombre d'essais au total
-    private String getMentionMessage(){
-        return trials <= 5 ? "Bravo" : trials <= 10 ? "Correct" : "Décevant";
     }
 
 }
